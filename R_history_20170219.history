@@ -1,0 +1,109 @@
+x = c(1, 3, 8)
+x
+y = 1:8
+y
+x = data.frame(#
+id = 1:4, #
+name = c("Kazuki Nakajima", "Umi Tanaka", "Natsu Yamada", "Sora Ito"), #
+age = c(16, 22, 24, 26)#
+)
+x
+x[1:3,]
+log(8)
+log10(100)
+log(4)
+> data=read.table("/Users/hiratsukashu/Downloads/demodata.txt", header=TRUE, sep="\t")
+data=read.table("/Users/hiratsukashu/Downloads/demodata.txt", header=TRUE, sep="\t")
+data
+data$fat
+data[1:10,]
+table(data$sex)
+mean(data$ht)
+summary(data)
+hist(data$ht)
+hist(data$fat)
+summary(data)
+table(data$sex)
+data
+mean(data$ht)
+sd(data$ht)
+max(data$ht)
+summary(data)
+bmi=(data$wt*10000)/(data$ht*data$ht)
+bmi
+summary(bmi)
+hist(bmi)
+hist(weight)
+summary(data)
+hist(wt)
+hist(data$wt)
+hist(data$wt,breaks=20)
+hist(data$wt,breaks=5)
+boxplot(data$ht)
+boxplot(data$wt)
+boxplot(data$dbp)
+boxplot(data$ht)
+summary(data)
+ai=(tc-hdlc)/(htdlc)
+ai=(tc-hdlc)/(hdlc)
+ai=(data$tc-data$hdlc)/(data$hdlc)
+ai
+summary(ai)
+hist(ai)
+boxplot(ai)
+#---ごぼうビールの売上データ#
+⽉ <- c(1:12)#
+気温 <- c(5.7,6.4,7.9,13.9,19.7,21.6,27.9,29.1,28.1,18.5,13.2,8.9)#
+消費量 <- c(2.41,3.91,4.32,5.55,5.63,6.23,8.34,8.39,7.33,5.51,4.95,4.77)#
+beer <- data.frame(⽉,気温,消費量); beer
+beer
+#---これを散布図にしてみると#
+p1 <- ggplot (beer, aes(x = 気温, y = 消費量))#
+p1 + geom_point(size = 5)+ labs(title = "気温とごぼうビール消費量の散布図")
+月
+month = c(1:12)
+temp = c(5.7,6.4,7.9,13.9,19.7,21.6,27.9,29.1,28.1,18.5,13.2,8.9)
+am_cost = c(2.41,3.91,4.32,5.55,5.63,6.23,8.34,8.39,7.33,5.51,4.95,4.77)
+beer = data.frame(month,temp,cost)
+beer = data.frame(month,temp,am_cost)
+beer
+round(cor(beer$am_cost , beer$temp),2)
+beer.lm = lm (消費量 ~ 気温, data = beer)
+summary(beer.lm)
+beer.lm
+z=c(1,1,1,2,2,2)
+z=as.factor(z)
+z
+w1=c(T,F,T,T)
+class(z)
+class(w1)
+x[c(2,4)]
+x=c(1.5, 3.0, 2.1, 4.8)
+(2<x) & (x<3)
+x[c(FALSE,TRUE,TRUE,FALSE)]
+x=c(1,2,3,4,5,6)
+x[(3<x) & (x<5)]
+x[(3>x) | (x>5)]
+x[(3>=x) | (x>=5)]
+x[(x != 2) & (x != 6)]
+data
+summary(data)
+data[(data$dbp <= 80) & (data$sbp <= 120)]
+dbp_sbp = c(data$dbp,data$sbp)
+dbp_sbp
+dbp = c(data$dbp)
+sbp = c(data$sbp)
+ideal[(dbp <= 80) & (sbp <= 120)]
+(data$dbp <= 80) & (data$sbp <= 120)
+data
+dbp_sbp = table(data$dbp,data$sbp)
+dbp_sbp
+dbp = table(data$dbp)
+dbp
+subset(data,data$dbp <= 80)
+subset(data,data$dbp <= 80 & data$sbp <= 120)
+subset(data,(data$dbp > 80 & data$dbp <= 85) & (data$sbp > 120 & data$sbp <= 130))
+bp1 = subset(data,data$dbp <= 80 & data$sbp <= 120)
+bp1
+bp2 = subset(data,(data$dbp > 80 & data$dbp <= 85) & (data$sbp > 120 & data$sbp <= 130))
+bp2
