@@ -107,3 +107,7 @@ bp1 = subset(data,data$dbp <= 80 & data$sbp <= 120)
 bp1
 bp2 = subset(data,(data$dbp > 80 & data$dbp <= 85) & (data$sbp > 120 & data$sbp <= 130))
 bp2
+
+data_csv=read.table("/Users/shunsukehiratsuka/Downloads/minidata.csv", header=TRUE, sep=",")
+data_csv[data_csv$ht >= 150 & data_csv$ht < 170, ]
+
