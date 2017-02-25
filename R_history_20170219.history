@@ -111,3 +111,27 @@ bp2
 data_csv=read.table("/Users/shunsukehiratsuka/Downloads/minidata.csv", header=TRUE, sep=",")
 data_csv[data_csv$ht >= 150 & data_csv$ht < 170, ]
 
+> mdata=demo_csv[demo_csv$sex=="m", ]
+> fdata=demo_csv[demo_csv$sex=="f", ]
+> hist(mdata$ht)
+> mean(mdata$ht)
+[1] 170.2369
+> sd(mdata$ht)
+[1] 5.942523
+> median(data$ht)
+[1] 160.8
+> median(mdata$ht)
+[1] 170.4
+> IQR(x)
+Error in quantile(as.numeric(x), c(0.25, 0.75), na.rm = na.rm, names = FALSE,  : 
+  object 'x' not found
+> m_median = median(mdata$ht)
+> IQR(m_median)
+[1] 0
+> m_median
+[1] 170.4
+> IQR(mdata)
+Error in quantile(as.numeric(x), c(0.25, 0.75), na.rm = na.rm, names = FALSE,  : 
+  (list) object cannot be coerced to type 'double'
+> IQR(mdata$ht)
+[1] 8.575
